@@ -11,9 +11,13 @@ public class GrayScale1Filter implements Filter {
 		for (int row = 0; row < theImage.getHeight(); row++) {
 			for (int col = 0; col < theImage.getWidth(); col++) {
 				int[] temp = data[row][col].rgb;
-				temp[0] = (int) (temp[0] * 0.3);
-				temp[1] = (int) (temp[1] * 0.59);
-				temp[2] = (int) (temp[2] * 0.11);
+				int grayValue = (int)(temp[0] * (30.0f/100.0f)) + (int)(temp[1] * (59.0f/100.0f)) + (int)(temp[2] * (11.0f/100.0f));
+				// red value
+				temp[0] = grayValue;
+				// green value
+				temp[1] = grayValue;
+				// blue value
+				temp[2] = grayValue;
 				data[row][col].rgb = temp;
 			}
 
