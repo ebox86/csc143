@@ -87,7 +87,7 @@ public class PixelImage
                 int[] px = data[row][col].rgb;
                 int red = px[Pixel.RED];
                 int green = px[Pixel.GREEN];
-                int blue = px[Pixel.BLUE};
+                int blue = px[Pixel.BLUE];
                 if(red < 0 || red > 255 || green < 0 || green > 255 || blue < 0 || blue > 255) {
                     throw new IllegalArgumentException("Pixel value out of range");
                 }
