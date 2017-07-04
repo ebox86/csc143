@@ -1,3 +1,9 @@
+/*
+ * Evan Kohout
+ * Assignment 1: SnapShop
+ * Minimum
+ * SnapShop configuration - edited config file which includes entries for 6 of the SnapShop Filters
+ */
 
 /**
  * A class to configure the SnapShop application
