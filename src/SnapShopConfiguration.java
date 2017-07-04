@@ -25,8 +25,8 @@ public class SnapShopConfiguration
 //        theShop.addLaplacianFilter(null);
 //        theShop.addUnsharpMaskingFilter(null);
 //        theShop.addEdgyFilter(null);
-//        theShop.addRotateClockwiseFilter(null);
-//        theShop.addRotateCounterClockwiseFilter(null);
+        theShop.addRotateClockwiseFilter(new RotateClockwiseFilter());
+        theShop.addRotateCounterClockwiseFilter(new RotateCounterClockwiseFilter());
     }
 
 }
