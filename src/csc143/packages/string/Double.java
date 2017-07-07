@@ -1,5 +1,8 @@
 package csc143.packages.string;
 
+import java.text.DecimalFormat;
+import java.util.Collections;
+
 /**
  * A class to handle conversion of double values to String representations.
  */
@@ -14,8 +17,7 @@ public class Double {
     * @return       The formatted string
     */
    public static String format1(double value) {
-   
-      return "";
+	  return format(value, 1, 6);
       
    }
    
@@ -28,8 +30,7 @@ public class Double {
     * @return       The formatted string
     */
    public static String format3(double value) {
-   
-      return "";
+	  return format(value, 3, 12);
       
    }
    
@@ -42,9 +43,14 @@ public class Double {
     * @return       The formatted string
     */
    public static String format(double value, int places, int width) {
-   
-      return "";
-      
+	   StringBuilder sb = new StringBuilder();
+	   String zeros = new String(new char[places]).replace("\0", "0");
+	   DecimalFormat df = new DecimalFormat("0." + zeros);
+	   String strNum = String.valueOf(df.format(value));
+	   int strLen = width - strNum.length();
+	   for(int i = 1; i <= strLen; i++) sb.append(" ");
+		  sb.append(strNum);
+	   return sb.toString();
    }
    
 }

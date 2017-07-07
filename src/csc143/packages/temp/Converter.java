@@ -11,8 +11,8 @@ public class Converter {
     * @return      The calculated Fahrenheit temperature
     */
    public static double c2f(double value) {
-   
-      return 0;
+	  double F = 1.8 * value + 32.0;
+      return F;
       
    }
    
