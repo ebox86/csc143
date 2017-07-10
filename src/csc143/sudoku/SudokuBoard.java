@@ -28,8 +28,6 @@ public class SudokuBoard extends javax.swing.JPanel {
     
     public void paintComponent(Graphics g){
     	super.paintComponent(g);
-    	g.setColor(Color.black);
-    	g.drawRect(0, 0, (cellSize) * (cols * rows) - cellPadding, (cellSize) * (cols * rows) - cellPadding);
 		int xVal = cellPadding;
 		int yVal = cellPadding;
 		int colorCount = 0;
@@ -48,14 +46,9 @@ public class SudokuBoard extends javax.swing.JPanel {
 				grayCells.add(tempCount);
 			}
 		}
-		
-		
-		for(int n = 0; n < grayCells.size(); n++){
-			System.out.println(grayCells.get(n));
-		}
+		// loops through each 'region' on the board and draws a new region
 		for(int i = 0; i < cols; i++){
     		for(int j = 0; j < rows; j++){
-    			System.out.println("region " + colorCount);
     			
     			// if there are an even number of columns, perform special check against colorCount list --
     			// the purpose of this check is to see whether the current region of game board should
@@ -77,18 +70,25 @@ public class SudokuBoard extends javax.swing.JPanel {
     		xVal = cellPadding;
 			yVal += (cellSize) * rows;
     	}
+    	// draws outer most border
+    	g.setColor(Color.black);
+    	g.drawRect(0, 0, (cellSize) * (cols * rows) - cellPadding, (cellSize) * (cols * rows) - cellPadding);
     }
     
 
     private void drawRegion(Graphics g, int colVal, int rowVal, int xVar, int yVar, Color c){
     	g.setColor(c);
 		g.fillRect(xVar, yVar, cellSize * cols, cellSize * rows);
-		g.setColor(Color.black);
     	for(int k = 0; k < rows; k++){
 			for(int l = 0; l < cols; l++){
-				g.drawRect(l * cellSize + xVar + cellPadding, k * cellSize + yVar + cellPadding, cellSize, cellSize);
+				drawCell(g, (l * cellSize) + xVar + cellPadding, (k * cellSize) + yVar + cellPadding, cellSize - 5);
 			}
 		}
+    }
+    
+    private void drawCell(Graphics g, int x, int y, int side){
+    	g.setColor(Color.black);
+    	g.drawRect(x, y, side, side);
     }
     
     @Override
