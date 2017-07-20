@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding=".DS_Store|Codingbat/|Filter.java|FlipHorizontalFilter.java|FlipVerticalFilter.java|GrayScale1Filter.java|GrayScale2Filter.java|Layout.java|LayoutTest.java|Part2.java|Pixel.java|PixelImage.java|RotateClockwiseFilter.java|RotateCounterClockwiseFilter.java|SnapShop.java|SnapShopConfiguration.java|csc143/|csc143/.DS_Store|csc143/graphics/|csc143/junit/|csc143/packages/|csc143/sudoku/|csc143/test/|csc143/test/sudoku/" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
