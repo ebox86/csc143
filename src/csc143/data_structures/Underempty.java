@@ -1,0 +1,7 @@
+package csc143.data_structures;
+
+public class Underempty extends java.lang.Exception {
+    public Underempty(String msg) {
+        super(msg);
+    }
+}
