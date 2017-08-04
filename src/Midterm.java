@@ -20,7 +20,7 @@ public class Midterm extends JPanel {
         c = win.getContentPane();
         c.setLayout(new java.awt.GridLayout(1, 3));
         Font f = new Font("Dialog", Font.BOLD, 36);
-        Graphics2D g2 = new (Graphics2D)g;
+        //Graphics2D g2 = new (Graphics2D)g;
         b1 = new javax.swing.JButton("up");
         b2 = new javax.swing.JButton("dn");
         c.add(b1, BorderLayout.WEST);
