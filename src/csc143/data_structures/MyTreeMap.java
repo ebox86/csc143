@@ -1,10 +1,23 @@
 package csc143.data_structures;
 
-public class MyTreeMap implements BasicMap<K, V> {
-
+public class MyTreeMap<K, V> implements BasicMap <K, V> {
+	
+	private Node root;
 		
+	private class Node {
+		private K key;
+		private V val;
+		private Node left, right;
+		private int size;
+		public Node(K key, V val, Node left, Node right){
+			this.key = key;
+			this.val = val;
+			this.size = size;
+		}
+	}
+	
 	public MyTreeMap() {
-		
+		root = null;
 	}
 
 	@Override
@@ -12,7 +25,8 @@ public class MyTreeMap implements BasicMap<K, V> {
 		
 		
 	}
-
+	
+	
 	@Override
 	public V get(Object key) {
 		
@@ -33,6 +47,4 @@ public class MyTreeMap implements BasicMap<K, V> {
 
 }
 
-class Node {
-	
-}
+
